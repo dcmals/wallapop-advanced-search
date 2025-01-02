@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallapop User Viewer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.min.css">
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+</head>
+<body>
+    <header>Buscador avanzado de productos de Wallapop <h6 style="margin: 20px 0 0 0">"Herramienta no vinculada con wallapop.com"</h6></header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <img id="user-avatar" src="https://placehold.co/200" alt="User Avatar">
+            <h2 id="user-name">Nombre del usuario</h2>
+            <div class="stat" id="user-location">Ubicación: Desconocida</div>
+            <div class="stat" id="user-register-date">Fecha de registro: Desconocida</div>
+            <div class="stat" id="user-total-products">Productos publicados: Desconocido</div>
+            <div class="stat" id="user-buys">Compras realizadas: Desconocido</div>
+            <div class="stat" id="user-sells">Ventas realizadas: Desconocido</div>
+            <div class="stat" id="user-reviews">Número de reviews: Desconocido</div>
+        </aside>
+
+        <main class="main">
+            <div class="search-bar">
+                <input type="text" id="user-slug" placeholder="Introduce la url del perfil o su nombre de usuario">
+                <button id="search-user">Buscar</button>
+            </div>
+
+            <div class="search-and-sort">
+                <input type="text" id="search-products" placeholder="Buscar por título" disabled>
+                <select id="sort-products" disabled>
+                    <option value="">Ordenar por</option>
+                    <option value="name-asc">Nombre (ASC)</option>
+                    <option value="name-desc">Nombre (DESC)</option>
+                    <option value="price-asc">Precio (ASC)</option>
+                    <option value="price-desc">Precio (DESC)</option>
+                </select>
+            </div>
+
+            <div class="products" id="products-container"></div>
+        </main>
+    </div>
+
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal">&times;</button>
+            <h3 id="modal-title">Título del producto</h3>
+            <img id="modal-image" src="" alt="Producto">
+            <div class="description" id="modal-description">Descripción del producto</div>
+            <div class="price" id="modal-price">Precio: Desconocido</div>
+            <div class="reserved" id="modal-reserved">Reservado: No</div>
+            <a id="modal-link" href="#" target="_blank">Ver en Wallapop</a>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./main.min.js"></script>
+    
+</body>
+</html>
